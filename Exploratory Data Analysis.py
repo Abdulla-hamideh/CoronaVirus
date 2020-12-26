@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 # read the file
 total_cases = pd.read_csv("total_cases_by_la_20201022.csv")
 
