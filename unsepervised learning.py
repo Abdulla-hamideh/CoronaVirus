@@ -7,32 +7,6 @@ from sklearn import cluster
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 
-
-# data = pd.read_csv("trend_ca_20201026.csv")
-#
-# x= data.values[:,4:9]
-# print(x)
-# y = data.values[:,3]
-# print(y)
-# scaled_data = scale(x)
-# n_samples, n_features = scaled_data.shape
-# n_digits = len(np.unique(y))
-# Y2 = LabelEncoder().fit_transform(y)
-# aff = ["euclidean", "l1", "l2", "manhattan", "cosine"]
-# link = ["ward", "complete", "average"]
-# for a in aff:
-#     for l in link:
-#         if(l=="ward" and a!="euclidean"):
-#             continue
-#         else:
-#             print(a,l)
-#             model = cluster.AgglomerativeClustering(n_clusters=n_digits, linkage=l, affinity=a)
-#             model.fit(scaled_data)
-#             # run these scores on juptr in order to work
-#             # print(metrics.silhouette_score(scaled_data, model.labels_))
-#             print(metrics.completeness_score(Y2, model.labels_))
-#             print(metrics.homogeneity_score(Y2, model.labels_))
-
 data = pd.read_csv("scores.csv")
 score = ["Silhouette ","Completeness ", "Homogeneity "]
 data1 = data.groupby("Type")[score].sum()
